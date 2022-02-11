@@ -10,6 +10,8 @@ ALGOD_TOKEN = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 
 def getAlgodClient() -> AlgodClient:
+    print("ALGOD_ADDRESS: {}".format(ALGOD_ADDRESS))
+    print("ALGOD_TOKEN: {}".format(ALGOD_TOKEN))
     return AlgodClient(ALGOD_TOKEN, ALGOD_ADDRESS)
 
 
@@ -21,8 +23,8 @@ def getKmdClient() -> KMDClient:
     return KMDClient(KMD_TOKEN, KMD_ADDRESS)
 
 
-KMD_WALLET_NAME = "unencrypted-default-wallet"
-KMD_WALLET_PASSWORD = ""
+KMD_WALLET_NAME = "demo"
+KMD_WALLET_PASSWORD = "12345678"
 
 kmdAccounts: Optional[List[Account]] = None
 

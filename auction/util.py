@@ -29,7 +29,7 @@ class PendingTxnResponse:
 
 
 def waitForTransaction(
-    client: AlgodClient, txID: str, timeout: int = 10
+    client: AlgodClient, txID: str, timeout: int = 15
 ) -> PendingTxnResponse:
     lastStatus = client.status()
     lastRound = lastStatus["last-round"]

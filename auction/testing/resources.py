@@ -25,7 +25,7 @@ def payAccount(
     return waitForTransaction(client, signedTxn.get_txid())
 
 
-FUNDING_AMOUNT = 100_000_000
+FUNDING_AMOUNT = 100_000
 
 
 def fundAccount(
@@ -65,6 +65,8 @@ def getTemporaryAccount(client: AlgodClient) -> Account:
             txn.sign(genesisAccounts[i % len(genesisAccounts)].getPrivateKey())
             for i, txn in enumerate(txns)
         ]
+
+       # print(signedTxns)
 
         client.send_transactions(signedTxns)
 
@@ -110,7 +112,9 @@ def createDummyAsset(client: AlgodClient, total: int, account: Account = None) -
         note=randomNote,
         sp=client.suggested_params(),
     )
+    print(txn)
     signedTxn = txn.sign(account.getPrivateKey())
+    print(signedTxn)
 
     client.send_transaction(signedTxn)
 
