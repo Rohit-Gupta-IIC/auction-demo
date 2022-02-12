@@ -10,8 +10,8 @@ ALGOD_TOKEN = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 
 def getAlgodClient() -> AlgodClient:
-    print("ALGOD_ADDRESS: {}".format(ALGOD_ADDRESS))
-    print("ALGOD_TOKEN: {}".format(ALGOD_TOKEN))
+    # print("ALGOD_ADDRESS: {}".format(ALGOD_ADDRESS))
+    # print("ALGOD_TOKEN: {}".format(ALGOD_TOKEN))
     return AlgodClient(ALGOD_TOKEN, ALGOD_ADDRESS)
 
 

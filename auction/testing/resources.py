@@ -112,9 +112,9 @@ def createDummyAsset(client: AlgodClient, total: int, account: Account = None) -
         note=randomNote,
         sp=client.suggested_params(),
     )
-    print(txn)
+    # print(txn)
     signedTxn = txn.sign(account.getPrivateKey())
-    print(signedTxn)
+    # print(signedTxn)
 
     client.send_transaction(signedTxn)
 
